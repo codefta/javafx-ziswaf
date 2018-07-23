@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ziswaf.view.JamaahLayoutController">
+   <children>
+      <AnchorPane prefHeight="680.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane layoutX="999.0" layoutY="627.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAddJamaah" prefHeight="28.0" prefWidth="91.0" text="Tambah">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleDeleteJamaah" prefHeight="28.0" prefWidth="92.0" text="Hapus" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <TableView fx:id="jamaahTable" layoutX="413.0" layoutY="80.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="527.0" prefWidth="780.0">
+               <columns>
+                  <TableColumn fx:id="idJamaah" prefWidth="114.0" text="ID JAMAAH" />
+                  <TableColumn fx:id="namaJamaah" onEditCommit="#editNamaJamaah" prefWidth="223.0" text="NAMA" />
+                  <TableColumn fx:id="alamatJamaah" onEditCommit="#editAlamatJamaah" prefWidth="273.0" text="ALAMAT" />
+                  <TableColumn fx:id="statusJamaah" onEditCommit="#editStatusJamaah" prefWidth="169.0" text="STATUS" />
+               </columns>
+            </TableView>
+         </children></AnchorPane>
+      <GridPane layoutX="1015.0" layoutY="82.0" prefHeight="61.0" prefWidth="148.0" AnchorPane.bottomAnchor="657.0" AnchorPane.leftAnchor="1015.0" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="82.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0" minWidth="10.0" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="98.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <AnchorPane prefHeight="680.0" prefWidth="334.0" style="-fx-background-color: #006699;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Group layoutX="60.0" layoutY="446.0">
+               <children>
+                  <Button layoutX="-6.0" mnemonicParsing="false" onAction="#changeToLaporan" prefHeight="102.0" prefWidth="278.0" style="-fx-background-color: #006699;" />
+                  <Text layoutX="137.0" layoutY="54.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Laporan">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="66.0" fitWidth="56.0" layoutX="34.0" layoutY="19.0">
+                     <image>
+                        <Image url="@../image/laporan.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Group layoutX="56.0" layoutY="338.0">
+               <children>
+                  <Button layoutX="-3.0" mnemonicParsing="false" onAction="#changeToPembayaran" prefHeight="102.0" prefWidth="278.0" style="-fx-background-color: #006699;" />
+                  <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="27.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Bayar.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="133.0" layoutY="58.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembayaran">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group layoutX="57.0" layoutY="116.0">
+               <children>
+                  <Button layoutY="3.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="277.0" style="-fx-background-color: #d9d9d9;" />
+                  <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="21.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Data%20jamaah.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="130.0" layoutY="65.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Jamaah" wrappingWidth="135.00000265613198">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group layoutX="55.0" layoutY="232.0">
+               <children>
+                  <Button layoutX="-2.0" mnemonicParsing="false" onAction="#changeToWakaf" prefHeight="102.0" prefWidth="278.0" style="-fx-background-color: #006699;" />
+                  <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="26.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Wakaf.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="135.0" layoutY="58.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Wakaf">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" fx:id="dialogNewJamaah" layoutX="415.0" layoutY="81.0" prefHeight="529.0" prefWidth="793.0" style="-fx-background-color: #006699;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="415.0" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="81.0">
+         <children>
+            <GridPane layoutX="77.0" layoutY="148.0" prefHeight="252.0" prefWidth="556.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="126.33334350585938" minHeight="10.0" prefHeight="74.33334350585938" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="137.33334350585938" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="namaField" prefHeight="45.0" prefWidth="369.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="alamatField" prefHeight="45.0" prefWidth="369.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="statusField" prefHeight="45.0" prefWidth="369.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#fff8f8" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama" textAlignment="CENTER" wrappingWidth="268.8568115234375">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat" textAlignment="CENTER" wrappingWidth="275.4700622558594" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" textAlignment="CENTER" wrappingWidth="276.8033142089844" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+            <Text fill="WHITE" layoutX="267.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Text>
+            <Text fill="#26c929" layoutX="411.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jamaah">
+               <font>
+                  <Font name="Meiryo UI Bold Italic" size="32.0" />
+               </font>
+            </Text>
+            <GridPane layoutX="721.0" layoutY="515.0" prefHeight="30.0" prefWidth="203.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Button layoutX="419.0" layoutY="441.0" mnemonicParsing="false" onAction="#handleNewJamaah" prefHeight="27.0" prefWidth="101.0" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="535.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="92.0" text="Cancel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Group layoutX="61.0" layoutY="563.0">
+         <children>
+            <Button layoutX="-2.0" mnemonicParsing="false" onAction="#changeToChart" prefHeight="102.0" prefWidth="260.0" style="-fx-background-color: #006699;" />
+            <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="30.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Statistic.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="139.0" layoutY="58.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistic">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Text fill="#26c929" layoutX="139.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ziswaf">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="52.0" fitWidth="56.0" layoutX="77.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/ZF.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

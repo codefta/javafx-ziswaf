@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ziswaf.view.WakafController">
+   <children>
+      <AnchorPane prefHeight="680.0" prefWidth="334.0" style="-fx-background-color: #006699;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Group layoutX="61.0" layoutY="563.0">
+               <children>
+                  <Button layoutX="-2.0" mnemonicParsing="false" onAction="#changeToChart" prefHeight="102.0" prefWidth="260.0" style="-fx-background-color: #006699;" />
+                  <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="30.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Statistic.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="139.0" layoutY="58.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistic">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group layoutX="60.0" layoutY="446.0">
+               <children>
+                  <Button layoutX="-6.0" mnemonicParsing="false" onAction="#changeToLaporan" prefHeight="102.0" prefWidth="264.0" style="-fx-background-color: #006699;" />
+                  <Text layoutX="137.0" layoutY="54.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Laporan">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="66.0" fitWidth="56.0" layoutX="34.0" layoutY="19.0">
+                     <image>
+                        <Image url="@../image/laporan.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Group layoutX="56.0" layoutY="338.0">
+               <children>
+                  <Button layoutX="-3.0" mnemonicParsing="false" onAction="#changeToPembayaran" prefHeight="102.0" prefWidth="266.0" style="-fx-background-color: #006699;" />
+                  <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="27.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Bayar.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="133.0" layoutY="58.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembayaran">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group layoutX="57.0" layoutY="116.0">
+               <children>
+                  <Button layoutY="3.0" mnemonicParsing="false" onAction="#changeToJamaahLayout" prefHeight="102.0" prefWidth="265.0" style="-fx-background-color: #006699;" />
+                  <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="21.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Data%20jamaah.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="130.0" layoutY="65.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Jamaah" wrappingWidth="135.00000265613198">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group layoutX="55.0" layoutY="232.0">
+               <children>
+                  <Button layoutX="5.0" mnemonicParsing="false" onAction="#changeToWakaf" prefHeight="102.0" prefWidth="274.0" style="-fx-background-color: #d9d9d9;" />
+                  <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="26.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Wakaf.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="135.0" layoutY="58.3388671875" strokeType="OUTSIDE" strokeWidth="0.0" text="Wakaf">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="1021.0" layoutY="607.0" prefHeight="37.0" prefWidth="205.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.66668701171875" minWidth="10.0" prefWidth="107.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="107.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleDeleteWakaf" prefHeight="28.0" prefWidth="92.0" text="Hapus" GridPane.columnIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button layoutX="224.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnAddWakaf" prefHeight="28.0" prefWidth="92.0" text="Tambah">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+      <TableView fx:id="wakafTable" layoutX="410.0" layoutY="93.0" prefHeight="472.0" prefWidth="801.0">
+        <columns>
+          <TableColumn fx:id="no" prefWidth="122.0" text="ID WAKAF" />
+          <TableColumn fx:id="jenisWakaf" onEditCommit="#editJenisWakaf" prefWidth="255.0" text="JENIS WAKAF" />
+            <TableColumn fx:id="targetWakaf" minWidth="9.6666259765625" onEditCommit="#editTargetWakaf" prefWidth="233.0" text="TARGET WAKAF" />
+            <TableColumn fx:id="progresWakaf" minWidth="9.6666259765625" onEditCommit="#editProgressWakaf" prefWidth="191.66668701171875" text="KETERANGAN" />
+        </columns>
+      </TableView>
+      <Text fill="#26c929" layoutX="139.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ziswaf">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="52.0" fitWidth="56.0" layoutX="77.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/ZF.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="AnchorPane" fx:id="dialogNewWakaf" layoutX="409.0" layoutY="91.0" prefHeight="472.0" prefWidth="801.0" style="-fx-background-color: #006699;">
+         <children>
+            <GridPane layoutX="84.0" layoutY="133.0" prefHeight="252.0" prefWidth="556.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="126.33334350585938" minHeight="10.0" prefHeight="74.33334350585938" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="137.33334350585938" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="jenisWakafField" prefHeight="45.0" prefWidth="369.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="targetWakafField" prefHeight="45.0" prefWidth="369.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Wakaf" textAlignment="CENTER" wrappingWidth="268.8568115234375">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Target Wakaf" textAlignment="CENTER" wrappingWidth="275.4700622558594" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Keterangan" textAlignment="CENTER" wrappingWidth="276.8033142089844" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="progressWakafField" layoutX="288.0" layoutY="106.0" prefHeight="45.0" prefWidth="369.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Text fill="#f8f8f8" layoutX="296.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Text>
+            <Text fill="#26c929" layoutX="445.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wakaf">
+               <font>
+                  <Font name="Meiryo UI Bold Italic" size="32.0" />
+               </font>
+            </Text>
+            <Button layoutX="440.0" layoutY="415.0" mnemonicParsing="false" onAction="#handleNewWakaf" prefHeight="34.0" prefWidth="101.0" text="Submit">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="553.0" layoutY="415.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="92.0" text="Cancel">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
